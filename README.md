@@ -37,7 +37,7 @@ A voice-enabled AI assistant that helps rural users verify legal documents (land
 ## 📸 Screenshots
 | Feature Section | Laws Section |
 |----------------|--------------|
-| ![Feature](assets/feature-img.jpg) | ![Laws](assets/laws-image.jpg) |
+| ![Feature](assets/feature-img.png) | ![Laws](assets/laws-image.png) |
 
 ## 🏗️ Setup Instructions
 ```bash
