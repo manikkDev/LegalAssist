@@ -1,0 +1,392 @@
+/* for the global styles */
+:root {
+  --primary-color: #4a6bff;
+  --secondary-color: #f8f9fa;
+  --text-color: #333;
+  --bg-color: #fff;
+  --card-bg: #f1f3ff;
+  --footer-bg: #2c3e50;
+}
+
+[data-theme="dark"] {
+  --primary-color: #6c8eff;
+  --secondary-color: #1a1a2e;
+  --text-color: #f1f1f1;
+  --bg-color: #16213e;
+  --card-bg: #0f3460;
+  --footer-bg: #0a192f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background 0.3s, color 0.3s;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary-color);
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Hero Sec the 1st sec */
+.hero {
+  padding: 120px 0 60px;
+  background-color: var(--secondary-color);
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+
+.upload-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.upload-box {
+  flex: 1;
+}
+
+#file-upload {
+  display: none;
+}
+
+.upload-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 500;
+}
+
+.upload-btn:hover {
+  background-color: #3a5bff;
+}
+
+#file-name {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.action-btn {
+  padding: 12px 30px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.action-btn:hover {
+  background-color: #218838;
+}
+
+.search-container {
+  position: relative;
+  width: 100%;
+}
+
+#law-search {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding-right: 50px;
+}
+
+#search-btn {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* for processing the animation */
+.processing {
+  display: none;
+  text-align: center;
+  padding: 30px;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid var(--primary-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* the feature section */
+.feature {
+  padding: 80px 0;
+}
+
+.feature .container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.feature-image {
+  flex: 1;
+}
+
+.feature-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-content {
+  flex: 1;
+}
+
+.feature h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.feature p {
+  margin-bottom: 20px;
+}
+
+.feature ul {
+  list-style: none;
+}
+
+.feature ul li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature ul li i {
+  color: var(--primary-color);
+}
+
+/* laws Section 3rd section */
+.laws {
+  padding: 80px 0;
+  background-color: var(--bg-color);
+}
+
+.laws .container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.laws-image {
+  flex: 1;
+  order: 1;
+}
+
+.laws-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.laws-content {
+  flex: 1;
+  order: 2;
+}
+
+.laws h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.law-card {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.law-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.law-card h3 i {
+  font-size: 1.2rem;
+}
+
+/* the Footer */
+.footer {
+  background-color: var(--footer-bg);
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* for the overall responsiveness */
+@media (max-width: 768px) {
+  .hero .container,
+  .feature .container {
+    flex-direction: column;
+  }
+
+  .hero {
+    padding: 100px 0 40px;
+  }
+
+  .upload-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .laws .container {
+    flex-direction: column;
+  }
+
+  .laws-image {
+    order: 2;
+  }
+
+  .laws-content {
+    order: 1;
+  }
+}

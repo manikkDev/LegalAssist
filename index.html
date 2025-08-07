@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rural Legal Assistant</title>
+    <link rel="preload" href="assets/legal-img-2.jpg" as="image">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- for the google auth -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">LegalAssist</a>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Features</a>
+                <a href="#">About</a>
+                <div id="g_id_onload" data-client_id="YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com"
+                    data-login_uri="https://your-backend.com/auth/google/callback" data-auto_prompt="false">
+                </div>
+                <div class="g_id_signin" data-type="standard" data-size="medium" data-theme="light"
+                    data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left">
+                </div>
+                <button id="theme-toggle" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- hero sec -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Protect Your Rights with AI </h1>
+                <p>Upload documents or ask questions in your language to verify legal compliance.</p>
+
+                <div class="upload-container">
+                    <div class="upload-box">
+                        <input type="file" id="file-upload" accept=".pdf,.jpg,.png">
+                        <label for="file-upload" class="upload-btn">
+                            <i class="fas fa-cloud-upload-alt"></i> Upload Document
+                        </label>
+                        <span id="file-name">No file chosen</span>
+                    </div>
+                    <button id="process-btn" class="action-btn">Start Analysis</button>
+                </div>
+
+                <div class="search-container">
+                    <input type="text" id="law-search" placeholder="Search for a law (e.g., 'Stamp Duty Requirements')">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/legal-img-2.jpg">
+            </div>
+        </div>
+    </section>
+
+    <!-- for anim -->
+    <div id="processing-animation" class="processing">
+        <div class="loader"></div>
+        <p>Analyzing your document...</p>
+    </div>
+
+    <!-- for the feature sec -->
+    <section class="feature">
+        <div class="container">
+            <div class="feature-image">
+                <img src="assets/legal-img-3.webp">
+            </div>
+            <div class="feature-content">
+                <h2>How It Works</h2>
+                <p>Our AI system scans your documents and compares them with the latest Indian laws. Get instant results
+                    in your preferred language with voice assistance.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Land Document Verification</li>
+                    <li><i class="fas fa-check-circle"></i> Insurance Policy Analysis</li>
+                    <li><i class="fas fa-check-circle"></i> Regional Language Support</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="feature">
+        <div class="container">
+            <div class="feature-image">
+                <img src="assets/legal-img-4.jpg" alt="How It Works">
+            </div>
+            <div class="feature-content">
+                <h2>How It Works</h2>
+                <p>Our AI system scans your documents and compares them with the latest Indian laws. Get instant results
+                    in your preferred language with voice assistance.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Land Document Verification</li>
+                    <li><i class="fas fa-check-circle"></i> Insurance Policy Analysis</li>
+                    <li><i class="fas fa-check-circle"></i> Regional Language Support</li>
+                </ul>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- the last sec for laws Section -->
+    <section class="laws">
+        <div class="container">
+            <div class="laws-content">
+                <h2>Key Indian Laws You Should Know</h2>
+                <div class="law-card">
+                    <h3><i class="fas fa-landmark"></i> Indian Registration Act, 1908</h3>
+                    <p>Mandates registration of property documents to prevent fraud. All transactions above ₹100 must be
+                        registered.</p>
+                </div>
+                <div class="law-card">
+                    <h3><i class="fas fa-file-contract"></i> Transfer of Property Act, 1882</h3>
+                    <p>Governs property transfer rules. Section 53A protects buyers if partial payment is made and
+                        possession is taken.</p>
+                </div>
+                <div class="law-card">
+                    <h3><i class="fas fa-gavel"></i> Indian Stamp Act, 1899</h3>
+                    <p>Requires stamp duty payment on legal documents. Unstamped documents are inadmissible in court.
+                    </p>
+                </div>
+            </div>
+            <div class="laws-image">
+                <img src="assets/legal-img-5.webp">
+            </div>
+        </div>
+    </section>
+
+    <!-- the footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 LegalAssist. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
